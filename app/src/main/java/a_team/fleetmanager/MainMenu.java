@@ -1,16 +1,16 @@
 package a_team.fleetmanager;
 
 import android.content.Intent;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainMenu extends AppCompatActivity {
 
     private Button btn_VehicleData, btn_GasChart, btn_ServiceInfo, btn_AllVehicleInfo, btn_Select;
+    private TextView title;
     private int car_num;
     private final int VEHICLE_REQUEST_ID = 2;
 
@@ -18,6 +18,7 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        title = findViewById(R.id.tv_MainTitle);
         btn_VehicleData = findViewById(R.id.btn_VehicleInfo);
         btn_GasChart = findViewById(R.id.btn_GasData);
         btn_ServiceInfo = findViewById(R.id.btn_ServiceInformation);
@@ -35,36 +36,52 @@ public class MainMenu extends AppCompatActivity {
         btn_VehicleData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO
+                view_vehicle_data();
             }
         });
 
         btn_GasChart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO
+                view_gas();
             }
         });
 
         btn_ServiceInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO
+                view_service_info();
             }
         });
 
         btn_AllVehicleInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO
+                view_all_vehicle_data();
             }
         });
 
     }
 
     private void select_vehicle(){
-        Intent intent = new Intent(this, Select_Vehicle.class);
+        Intent intent = new Intent(this, SelectVehicle.class);
         startActivityForResult(intent, VEHICLE_REQUEST_ID);
+    }
+
+    private void view_gas(){
+        //TODO graph of chosen vehiicle gas consumptions x-axis = day, y-axis = gallons of gas
+    }
+
+    private void view_vehicle_data(){
+        //TODO
+    }
+
+    private void view_all_vehicle_data(){
+        //TODO graph of all vehicle gas consumptions compared on the same graph
+    }
+
+    private void view_service_info(){
+        //TODO
     }
 
 
@@ -79,6 +96,7 @@ public class MainMenu extends AppCompatActivity {
 
             case VEHICLE_REQUEST_ID:
                 int car_num = returnedData.getIntExtra("vehicle", 0);
+                title.setText("Fleet Manager : " + car_num);
                 break;
         }
     }

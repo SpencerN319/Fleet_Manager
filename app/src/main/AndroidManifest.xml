@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="Select_Vehicle"
+        <activity android:name=".SelectVehicle"
                   android:theme="@android:style/Theme.Dialog"></activity>
     </application>
 
