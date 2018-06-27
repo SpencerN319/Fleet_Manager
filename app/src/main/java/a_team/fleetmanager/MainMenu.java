@@ -69,19 +69,23 @@ public class MainMenu extends AppCompatActivity {
     }
 
     private void view_gas(){
-        //TODO graph of chosen vehiicle gas consumptions x-axis = day, y-axis = gallons of gas
+        Intent intent = new Intent(this, GasChart.class);
+        startActivity(intent);
     }
 
     private void view_vehicle_data(){
-        //TODO
+        Intent intent = new Intent(this, CarData.class);
+        startActivity(intent);
     }
 
     private void view_all_vehicle_data(){
-        //TODO graph of all vehicle gas consumptions compared on the same graph
+        Intent intent = new Intent(this, ComparisonGasChart.class);
+        startActivity(intent);
     }
 
     private void view_service_info(){
-        //TODO
+        Intent intent = new Intent(this, ServiceInfo.class);
+        startActivity(intent);
     }
 
 
@@ -96,7 +100,7 @@ public class MainMenu extends AppCompatActivity {
 
             case VEHICLE_REQUEST_ID:
                 int car_num = returnedData.getIntExtra("vehicle", 0);
-                title.setText("Fleet Manager : " + car_num);
+                title.setText("Vehicle : " + car_num);
                 break;
         }
     }
