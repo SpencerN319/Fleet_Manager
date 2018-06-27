@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Select_Vehicle extends Activity {
+public class SelectVehicle extends Activity {
     private Button b1, b2, b3, b4, b5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Select_Vehicle);
+        setContentView(R.layout.activity_select_vehicle);
 
         b1 = findViewById(R.id.btn_One);
         b2 = findViewById(R.id.btn_Two);
