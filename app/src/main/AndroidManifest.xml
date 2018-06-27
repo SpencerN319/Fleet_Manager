@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ServiceInfo" />
-        <activity android:name=".CarData"></activity>
+        <activity android:name=".SelectVehicle" />
+        <activity android:name=".CarData" />
+        <activity android:name=".GasChart" />
+        <activity android:name=".ComparisonGasChart"></activity>
     </application>
 
 </manifest>

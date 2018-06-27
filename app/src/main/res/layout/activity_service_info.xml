@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Description:"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textSize="24sp"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:text="Date:"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textSize="24sp"
@@ -41,8 +41,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Service Information"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textSize="30sp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -53,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Service:"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textSize="24sp"
@@ -61,45 +62,57 @@
         app:layout_constraintTop_toBottomOf="@+id/ServiceInfoLabel"
         tools:text="Service:" />
 
-    <TextView
+    <EditText
         android:id="@+id/Service"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textSize="24sp"
+        android:hint="type of service"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ServiceLabel"
         app:layout_constraintTop_toBottomOf="@+id/ServiceInfoLabel" />
 
-    <TextView
+    <EditText
         android:id="@+id/Date"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:hint="day/month/year"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/DateLabel"
-        app:layout_constraintTop_toBottomOf="@+id/ServiceLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/Service" />
 
-    <TextView
+    <EditText
         android:id="@+id/Description"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="248dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="description of service performed"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DescriptionLabel" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/add_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

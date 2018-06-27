@@ -8,4 +8,10 @@
     <color name="textSecondary">#9ed7e2</color>
     <color name="accentPrimary">#ee7c1c</color>
     <color name="backgroundSecondary">#9ed7e2</color>
+
+    <color name="yellow">#FFFF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="red">#FF0000</color>
+    <color name="lime">#00FF00</color>
+
 </resources>
